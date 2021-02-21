@@ -52,4 +52,6 @@ struct Node *update_weight(struct Node *curr); //update weight of box with speci
 
 struct Node *deleteAnyPos(struct Node*); //Remove the box with given id
 
+void *count_colour(struct Node *curr);
+
 #endif // __BOX_H_INCLUDED

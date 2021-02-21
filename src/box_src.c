@@ -185,3 +185,24 @@ struct Node*deleteAnyPos(struct Node*first)
 	}
 	 return first;
 }
+
+void *count_colur(struct Node *first)
+{
+    char name[20];
+    int count=0;
+    struct Node *curr;
+    printf("\nEnter the colour of the box to count");
+    scanf("%s",name);
+    for(curr= first; curr!=NULL; curr=curr->next)
+    {
+        if((strcmp(curr->data.colour,name)==0))
+        {
+            printf("\n Data found");
+            count++;
+            display_box(curr->data);
+        }
+        else
+        printf("\n data not found:");
+    }
+    printf("\n Number of boxes with %s colour= %d",name,count);   
+}
