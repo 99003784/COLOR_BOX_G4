@@ -3,7 +3,7 @@
 
 /**
  * @file box.h
- * @author A H Aruna name (a.aruna@ltts.com) & Souvik Jana (souvik.jana@ltts.com)
+ * @author A H Aruna name (a.aruna@ltts.com) & Souvik Jana ( souvik.jana@ltts.com ).
  * @brief
  * @version 0.1
  * @date 2021-02-20
