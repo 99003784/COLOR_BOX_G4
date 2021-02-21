@@ -3,7 +3,7 @@
 
 /**
  * @file box.h
- * @author A H Aruna name (a.aruna@ltts.com.com)
+ * @author A H Aruna name (a.aruna@ltts.com)
  * @brief
  * @version 0.1
  * @date 2021-02-20
@@ -34,7 +34,7 @@ struct Node
 
 void read_box(box *); // read the box parameters
 
-void display_box(box ); // display the box paramters
+void display_box(box); // display the box paramters
 
 struct Node *getNode(); // creates the memory for the box
 
@@ -48,5 +48,8 @@ void display_list(struct Node *);// display the list calling display function ho
 
 void max_height(struct Node *first)// to dispaly the maximum height
 
+struct Node *update_weight(struct Node *curr); //update weight of box with specific id
+
+struct Node *deleteAnyPos(struct Node*); //Remove the box with given id
 
 #endif // __BOX_H_INCLUDED

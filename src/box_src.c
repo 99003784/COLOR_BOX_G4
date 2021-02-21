@@ -126,3 +126,62 @@ void max_height(struct Node *first)
     }
 
 }
+struct Node *update_weight(struct Node *curr)
+{
+	int uid;
+	int new;
+	printf("\nEnter unique ID to change its weight: ");
+	scanf("%d", &uid);
+	printf("Searching for %d\n", uid);
+	while(curr!=NULL)
+	{
+		// printf("ID: %d", curr->data.unique_id);
+		if(curr->data.unique_id == uid)
+		{
+			printf("Box found\n");
+			printf("\nEnter new weight to update the old weight : ");
+			scanf("%d",&new);
+			printf("\nUpdating weight....");
+			curr->data.weight = new;
+			display_box(curr->data);
+			return (curr);
+		}
+
+		else
+		{
+			 printf("\nBox not found");
+		}
+		curr = curr->next;  
+	}
+}
+struct Node*deleteAnyPos(struct Node*first)
+{
+	struct Node *prev,*cur;
+	int uid;
+	printf("\nenter unique id to delete\n");
+	scanf("%d",&uid);
+	if(first==NULL)
+	{
+		printf("\n list is empty");
+	}
+	else
+	{
+		for(prev=NULL,cur=first;cur!=NULL&&uid!=cur->data.unique_id;prev=cur,cur=cur->next);
+		if(cur==NULL)
+		{
+			printf("\n node not found");
+		}
+		else
+		{
+			if(first ==cur)
+				first=first->next;
+			else
+				prev->next=cur->next;
+			printf("\n Deleted data is:");
+			display_box(cur->data);
+			freenode(cur);
+		}
+
+	}
+	 return first;
+}
