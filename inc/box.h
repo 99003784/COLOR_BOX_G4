@@ -56,4 +56,6 @@ void *count_colour(struct Node *curr);
 
 void average_vol(struct Node *first);//Find average volume of all boxes
 
+void min_max_vol(struct Node *first); // Find difference between max and min volume
+
 #endif // __BOX_H_INCLUDED
