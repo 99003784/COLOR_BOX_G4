@@ -54,4 +54,6 @@ struct Node *deleteAnyPos(struct Node*); //Remove the box with given id
 
 void *count_colour(struct Node *curr);
 
+void average_vol(struct Node *first);//Find average volume of all boxes
+
 #endif // __BOX_H_INCLUDED
