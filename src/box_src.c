@@ -224,17 +224,3 @@ void average_vol(struct Node *first)
 }
 
 
-void average_vol(struct Node *first)
-{
-    int sum=0;
-    struct Node *curr;
-    double avg;
-    int i;
-    for(curr = first;curr!=NULL;curr=curr->next)
-    {
-        sum += ((curr->data.length)*(curr->data.breadth)*(curr->data.height));
-        i++;
-    }
-    avg = sum/i;
-    printf("\n Average of all the boxes = %lf",avg);
-}
