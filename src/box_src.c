@@ -103,3 +103,26 @@ void display_list(struct Node *first)
             display_box(cuu->data);
     }
 }
+void max_height(struct Node *first)
+{
+    struct Node *cuu;
+    if(first==NULL)
+        printf("\nlink is empty");
+    else
+    {
+        int maxH=0;
+        box result;
+        for(cuu=first;cuu!=NULL;cuu=cuu->next)
+            {
+                box temp=cuu->data;
+                if(maxH < temp.height)
+                {
+                    maxH = temp.height;
+                    result = cuu->data;
+                }
+            }
+            printf("Maximum height of box is : %d\n",maxH);
+            display_box(result);
+    }
+
+}

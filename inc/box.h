@@ -46,5 +46,7 @@ struct Node *insert_last(struct Node *); // Inserts the box at last of the list
 
 void display_list(struct Node *);// display the list calling display function holds first box address
 
+void max_height(struct Node *first)// to dispaly the maximum height
 
-#endif // BOX_H_INCLUDED
+
+#endif // __BOX_H_INCLUDED
