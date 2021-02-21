@@ -224,3 +224,29 @@ void average_vol(struct Node *first)
 }
 
 
+void min_max_vol(struct Node *first)
+{
+    int vol=0,min=0,max=0;
+    int i,j,k;
+    struct Node *curr;
+    double avg;
+    for(curr = first;curr!=NULL;curr=curr->next)
+    {
+        vol = ((curr->data.length)*(curr->data.breadth)*(curr->data.height));
+        if(min>vol)
+        {
+            min = vol;
+            j=curr->data.unique_id;
+        }
+        else if(max<vol)
+         {
+             max = vol;
+             k = curr->data.unique_id;
+         }
+         else
+            i++;
+    }
+    printf("\n Minimum volume of the box with ID %d  = %lf\n Maximum volume of the box  with ID %d= %lf",j,min,k,max);
+}
+
+
