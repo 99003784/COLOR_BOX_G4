@@ -249,4 +249,15 @@ void min_max_vol(struct Node *first)
     printf("\n Minimum volume of the box with ID %d  = %lf\n Maximum volume of the box  with ID %d= %lf",j,min,k,max);
 }
 
-
+// find box by id function definition 
+void *find_box_by_id(const box* parr,int len,int u_id)
+{
+ const box *ptr=parr;
+	for(int i=0;i<len;i++)
+	{
+		if (ptr->unique_id==u_id)
+		{
+			printf("%s",ptr->name);
+		}
+		ptr++;
+	}
