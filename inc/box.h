@@ -58,4 +58,6 @@ void average_vol(struct Node *first);//Find average volume of all boxes
 
 void min_max_vol(struct Node *first); // Find difference between max and min volume
 
+void *find_box_by_id(const box*,int,int); // searching the box by id
+
 #endif // __BOX_H_INCLUDED
